@@ -11,7 +11,9 @@ class Genero(models.Model):
 class Jogo(models.Model):
     titulo = models.CharField(max_length=200)
     desenvolvedora =  models.ForeignKey('Desenvolvedora', on_delete=models.SET_NULL, null=True)
+    lancamento = models.DateField(null=True, blank=True)
     sinopse = models.TextField(max_length=1000, help_text="Digite a sinopse do jogo.")
+    plataforma = models.ForeignKey('Plataforma', on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.titulo
@@ -31,3 +33,14 @@ class Desenvolvedora(models.Model):
     def __str__(self):
         return f'{self.nome}'
 
+class Plataforma(models.Model):
+    nome = models.CharField(max_length=100)
+
+    class Meta: 
+        ordering = ['nome']
+
+    def get_absolute_url(self):
+        return reverse('plataforma-detalhe', args = [str(self.id)])
+
+    def __str__(self):
+        return f'{self.nome}'
