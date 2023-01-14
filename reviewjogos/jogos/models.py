@@ -19,19 +19,22 @@ class Jogo(models.Model):
         return self.titulo
 
     def get_absolute_url(self):
-        return reverse('jogo-detalhe', args=[str(self.id)])
+        return reverse('jogo-detail', args=[str(self.id)])
+
+    class Meta:
+        ordering = ['titulo']
 
 class Desenvolvedora(models.Model):
-    nome = models.CharField(max_length=100)
-
-    class Meta: 
-        ordering = ['nome']
+    nome = models.CharField(max_length=100)    
 
     def get_absolute_url(self):
         return reverse('desenvolvedora-detalhe', args = [str(self.id)])
 
     def __str__(self):
         return f'{self.nome}'
+
+    class Meta: 
+        ordering = ['nome']
 
 class Plataforma(models.Model):
     nome = models.CharField(max_length=100)

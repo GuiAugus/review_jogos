@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Lista de jogos</h1>
+  {% if jogo_list %}
+  <ul>
+    {% for jogo in jogo_list %}
+      <li>
+        <a href="{{ jogo.get_absolute_url}}"><strong>{{jogo.titulo}}</strong></a>: {{jogo.sinopse}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Está é a lista de jogos. TESTE</p>
+  {% endif %}
+{% endblock %}
