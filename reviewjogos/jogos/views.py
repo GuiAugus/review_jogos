@@ -18,6 +18,7 @@ class JogosListView(generic.ListView):
     model = Jogo
     context_object_name = 'jogo_list'
     template_name = 'jogos/jogos_list.html'
+    paginate_by = 2
 
     def get_context_data(self, **kwargs):
         context = super(JogosListView, self).get_context_data(**kwargs)
