@@ -22,7 +22,6 @@ class JogosListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super(JogosListView, self).get_context_data(**kwargs)
-        context['some_data'] = 'Teste'
         return context
 
 class JogoDetailView(generic.DetailView):
