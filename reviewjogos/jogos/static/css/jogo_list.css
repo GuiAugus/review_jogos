@@ -42,8 +42,6 @@
 
 .jogoCubo:hover {
     background: var(--cor2);
-    width: 110%;
-    height: 110%;
     font-weight: bolder;
 }
 
