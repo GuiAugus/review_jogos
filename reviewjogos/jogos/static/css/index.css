@@ -1,0 +1,23 @@
+@import url(style.css);
+
+h1 {
+    padding: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+p {
+    padding: 50px 50px 0px 50px;
+    font-size: 30px;
+}
+
+.listaIcones {
+    padding: 20px 20px 100px 20px;
+}
+
+.icons {
+    height: 50px;
+    width: 50px;
+    margin: 0px 10px 0px 10px;
+}
