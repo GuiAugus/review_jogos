@@ -1,10 +1,28 @@
 @import url(style.css);
 
-h1 {
+.home {
+    box-shadow: 10px 10px black;
+    background: var(--cor1);
+    padding-bottom: 30px;
+}
+
+.tituloHome {
     padding: 50px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 50px;
+
+    color: var(--cor4);
+    text-shadow: 2px 2px black;
+}
+
+.textoHome {
+    padding-bottom: 50px;
+    text-align: justify;
+}
+
+.redesSociais {
+    padding-top: 100px;
 }
 
 p {
@@ -13,7 +31,7 @@ p {
 }
 
 .listaIcones {
-    padding: 20px 20px 100px 20px;
+    padding: 20px 20px 10px 20px;
 }
 
 .icons {
