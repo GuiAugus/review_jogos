@@ -28,7 +28,7 @@ class Jogo(models.Model):
         return reverse('jogo-detail', args=[str(self.id)])
 
     class Meta:
-        ordering = ['titulo']
+        ordering = ['-data_publicacao']
 
 class Desenvolvedora(models.Model):
     nome = models.CharField(max_length=100)    

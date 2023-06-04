@@ -1,0 +1,55 @@
+@import url(style.css);
+
+.tituloJogo {
+    padding: 20px;
+
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--cor6);
+
+    text-shadow: 2px 2px black;
+}
+
+.jogoCapa {
+	max-width: 600px;
+	max-height: 400px;
+	margin-bottom: 10px;
+	box-shadow: 7px 7px black;
+}
+
+.desenvolvedora {
+    margin: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dataLancamento {
+    margin: 10px;
+}
+
+.plataformas {
+    margin: 10px;
+    text-transform: uppercase;
+}
+
+.textJogos {
+    background: var(--cor5);
+    box-shadow: 10px 10px black;
+}
+
+h2 {
+    padding: 30px 0 30px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+}
+
+.paragrafo {
+    padding: 0 15px 0 15px;
+    text-align: justify;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}

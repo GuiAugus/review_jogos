@@ -1,10 +1,29 @@
 {% extends "base_generic.html" %}
-
-
+{% load static %}
 {% block content %}
-  <h1>{{ jogo.titulo }}</h1>
 
-  <p><strong>Desenvolvedora:</strong> <a href="">{{ jogo.desenvolvedora }}</a></p>
-  <p><strong>Sinopse:</strong> {{ jogo.sinopse }}</p>
+<head>
+  <link rel="stylesheet" href="{% static 'css/jogo_detail.css' %}">
+</head>
+
+<body>
+  <div class="baseConteudo">
+    <h1 class="tituloJogo">{{ jogo.titulo }}</h1>
+
+    {% if jogo.imagem %}
+    <img class="jogoCapa" src="{{jogo.imagem.url}}">
+    {% endif %}
+    <p class="desenvolvedora">Desenvolvedora: {{ jogo.desenvolvedora }}</p>
+    <p class="dataLancamento">Lancamento: {{ jogo.lancamento}}</p>
+    <p class="plataformas">Plataformas: {{ jogo.plataforma}}</p>
+
+    <div class="textJogos">
+      <h2>Sinopse</h2>
+      <p class="paragrafo">{{ jogo.sinopse }}</p>
+      <h2>Review</h2>
+      <p class="paragrafo">{{ jogo.review }}</p>
+    </div>
+  </div>
+</body>
 
 {% endblock %}
