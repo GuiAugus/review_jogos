@@ -19,6 +19,7 @@ class Jogo(models.Model):
     plataforma = models.ForeignKey('Plataforma', on_delete=models.SET_NULL, null=True)
     imagem = models.ImageField(upload_to='images', default="Capa do jogo.")
     data_publicacao = models.DateTimeField(null=True, blank=True)
+    trailer_youtube = models.TextField(max_length=1000, help_text="Link do trailer do jogo.", default="")
     
 
     def __str__(self):
