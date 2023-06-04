@@ -26,11 +26,13 @@
 
 .dataLancamento {
     margin: 10px;
+    font-weight: bold;
 }
 
 .plataformas {
     margin: 10px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .textJogos {

@@ -2,6 +2,7 @@
 
 .tituloPagina {
     text-shadow: 2px 2px black;
+	text-transform: uppercase;
 }
 
 .bannerJogos  {
@@ -20,7 +21,7 @@
 	padding: 30px;
 
 	width: 500px;
-	height: 500px;
+	max-height: 1000px;
 
 	text-decoration: none;
 	text-align: center;
@@ -34,7 +35,7 @@
 	flex-direction:column;
 
 	max-width: 500px;
-	height: 500px;
+	max-height: 1500px;
 
 	background: var(--cor1);
 	box-shadow: 10px 10px black;

@@ -1,0 +1,14 @@
+@media (max-width: 500px) {
+    .baseConteudo {
+        width: 300px;
+    }
+
+    .jogoCapa	 {
+        width: 200px;
+        height: 150px;
+    }
+
+    .paginasLink{
+        max-width: 300px;
+    }
+}
