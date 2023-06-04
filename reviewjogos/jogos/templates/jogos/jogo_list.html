@@ -12,7 +12,7 @@
 <body>
   <div class="baseConteudo">
     <div class="bannerJogos">
-      <h1>REVIEW DE JOGOS</h1>
+      <h1 class="tituloPagina">Review de jogos</h1>
     </div>
     {% if jogo_list %}
     <ul>
@@ -25,7 +25,7 @@
             <img class="jogoCapa" src="{{jogo.imagem.url}}">
             {% endif %}
             <h5>{{jogo.desenvolvedora}}</h5>
-            <p>Sinopse: {{jogo.sinopse}} </p>
+            <p>{{jogo.sinopse}} </p>
           </div>
         </a>
       </li>
