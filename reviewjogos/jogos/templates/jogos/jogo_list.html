@@ -1,25 +1,48 @@
 {% extends "base_generic.html" %}
 {% load static %}
-
 {% block content %}
-  <h1>Lista de jogos</h1>
-  {% if jogo_list %}
-  <ul>
-    {% for jogo in jogo_list %}
-      <li>
-        <div>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista_jogos</title>
+  <link rel="stylesheet" href="{% static 'css/jogo_list.css' %}">
+</head>
+
+<body>
+  <div class="jogosLayout">
+    <div class="bannerJogos">
+      <h1>REVIEW DE JOGOS</h1>
+    </div>
+    {% if jogo_list %}
+    <ul>
+      {% for jogo in jogo_list %}
+      <li class="jogoCubo">
+        <a class="linkLayout" href="{{ jogo.get_absolute_url}}">
+          <div class="jogoLayout">
             {% if jogo.imagem %}
-                <img src="{{jogo.imagem.url}}" style="max-height:300px">
-            {% endif %}  
-            <a href="{{ jogo.get_absolute_url}}">{{jogo.titulo}}</a>
-            <h5>Desenvolvedora: {{jogo.desenvolvedora}}</h5>
+            <h1 class="tituloJogo">{{jogo.titulo}}</h1>
+            <img class="jogoCapa" src="{{jogo.imagem.url}}">
+            {% endif %}
+            <h5>{{jogo.desenvolvedora}}</h5>
             <p>Sinopse: {{jogo.sinopse}} </p>
-            <h5>Lancamento: {{jogo.lancamento}}</h5>
-        </div>
+          </div>
+        </a>
       </li>
-    {% endfor %}
-  </ul>
-  {% else %}
+      {% endfor %}
+    </ul>
+    {% else %}
     <p>Não há nenhum jogo para exibicão</p>
-  {% endif %}
-{% endblock %}
+    {% endif %}
+    {% endblock %}
+  </div>
+
+
+</body>
+
+
+</html>

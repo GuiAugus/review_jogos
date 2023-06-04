@@ -19,6 +19,7 @@ class Jogo(models.Model):
     plataforma = models.ForeignKey('Plataforma', on_delete=models.SET_NULL, null=True)
     imagem = models.ImageField(upload_to='images', default="Capa do jogo.")
     data_publicacao = models.DateTimeField(null=True, blank=True)
+    
 
     def __str__(self):
         return self.titulo
